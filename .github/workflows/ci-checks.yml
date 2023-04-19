@@ -1,0 +1,28 @@
+name: CI checks
+run-name: ${{ github.actor }} runs CI checks 🚀
+on: [push, pull_request]
+jobs:
+    checks:
+        runs-on: ubuntu-latest
+        
+        strategy:
+            matrix:
+                node-version: [ 18.x ]
+        steps:
+            -   uses: actions/checkout@v2
+            -   name: Use Node.js ${{ matrix.node-version }}
+                uses: actions/setup-node@v3
+                with:
+                    node-version: ${{ matrix.node-version }}
+            -   name: Install
+                run: yarn install --frozen-lockfile
+            -   name: Build
+                run: yarn run build
+                if: always()
+            -   name: Lint TypeScript
+                run: yarn run lint:ts
+                if: always()
+            -   name: Lint CSS
+                run: yarn run lint:css
+                if: always()
+   

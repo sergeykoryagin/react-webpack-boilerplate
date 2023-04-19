@@ -1,4 +1,8 @@
 .Button {
-    width: 150px;
+    position: fixed;
+
     display: flex;
+    width: 150px;
+
+    pointer-events: none;
 }

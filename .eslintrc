@@ -47,6 +47,7 @@
         "react/prefer-stateless-function": "off",
         "react/jsx-props-no-spreading": "off",
         "no-console": "off",
+        "@typescript-eslint/member-delimiter-style": ["error"],
         "react/function-component-definition": [
             "error",
             {

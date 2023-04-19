@@ -1,10 +1,22 @@
 {
   "extends": [
-    "stylelint-config-recommended"
+    "stylelint-config-recommended",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-config-rational-order/plugin"
   ],
   "rules": {
-    "max-empty-lines": 0,
-    "selector-max-empty-lines": 0,
-    "at-rule-empty-line-before": "always"
+    "order/properties-order": [],
+    "prettier/prettier": true,
+    "at-rule-empty-line-before": "always",
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": true,
+        "empty-line-between-groups": true
+      }
+    ]
   }
 }
