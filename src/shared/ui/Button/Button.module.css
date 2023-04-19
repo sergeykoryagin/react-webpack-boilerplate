@@ -2,7 +2,4 @@
     position: fixed;
 
     display: flex;
-    width: 150px;
-
-    pointer-events: none;
 }
