@@ -14,20 +14,15 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "strict": true,
-        "noEmit": true,
-        "plugins": [
-            {
-                "name": "typescript-plugin-css-modules"
-            }
-        ]
+        "noEmit": true
     },
     "ts-node": {
         "compilerOptions": {
             "module": "CommonJS",
-            "esModuleInterop": true,
-            "allowSyntheticDefaultImports": true
+            "allowSyntheticDefaultImports": true,
+            "esModuleInterop": true
         }
     },
     "exclude": ["node_modules"],
-    "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+    "include": ["./src/**/*.ts", "./src/**/*.tsx", "./config/**/*.ts"],
 }

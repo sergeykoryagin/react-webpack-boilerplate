@@ -1,6 +1,7 @@
 import { Configuration } from 'webpack';
 
 export interface BuildPaths {
+    stylelintConfig?: string;
     entry: string;
     build: string;
     html: string;

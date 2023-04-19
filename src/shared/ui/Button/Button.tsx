@@ -6,11 +6,12 @@ import styles from './Button.module.css';
 interface Props {
     className?: string;
 }
+
 export const Button: FC<PropsWithChildren<Props>> = ({
     className,
     children,
 }) => (
-    <button type='button' className={cn(styles.Button, className)}>
+    <button type="button" className={cn(styles.Button, className)}>
         {children}
     </button>
 );

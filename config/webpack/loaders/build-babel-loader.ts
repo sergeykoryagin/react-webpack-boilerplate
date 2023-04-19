@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import ReactRefreshBabelPlugin from 'react-refresh/babel';
 import { RuleSetRule } from 'webpack';
 
